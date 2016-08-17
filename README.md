@@ -785,7 +785,7 @@ For instance, to run your tests on [BrowserStack](https://browserstack.com)
 ```
 
 ### Base Url
-If you want to defined a default base url, just override the `getDefaultBaseUrl` method in your test. Every pages create with @Inject will also use this variable.
+If you want to defined a default base url, just override the `getBaseUrl` method in your test. Every pages create with @Inject will also use this variable.
 If a base url is provided, the current url will be relative to that base url.
 
 ### TimeOut
