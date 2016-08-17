@@ -2,6 +2,13 @@ package org.fluentlenium.configuration;
 
 import org.openqa.selenium.WebDriver;
 
+/**
+ * Configuration properties of FluentLenium.
+ * <p>
+ * FluentLenium can be configured in many ways: JavaBean Accessors, Java Annotations, JVM System properties,
+ * Environment variables, Java Properties File. All these ways can be used together as needed, and all configures
+ * the same set of properties.
+ */
 public interface ConfigurationRead {
     enum TriggerMode {ON_FAIL, NEVER, UNDEFINED}
 

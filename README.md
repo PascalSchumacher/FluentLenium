@@ -7,7 +7,7 @@
 FluentLenium is a framework that helps you to write [Selenium](http://seleniumhq.org/) tests.
 FluentLenium provides you a [fluent interface](http://en.wikipedia.org/wiki/Fluent_interface) to the [Selenium Web Driver](http://seleniumhq.org/docs/03_webdriver.html).
 FluentLenium lets you use the assertion framework you like, either [jUnit assertions](http://www.junit.org/apidocs/org/junit/Assert.html), [Hamcrest](http://code.google.com/p/hamcrest/wiki/Tutorial) 
-or [AssertJ](https://github.com/joel-costigliola/assertj-core)  (old one: ~~[Fest-assert](https://github.com/alexruiz/fest-assert-2.x/wiki)~~).
+or [AssertJ](https://github.com/joel-costigliola/assertj-core).
 
 
 # 5 second example
@@ -40,7 +40,7 @@ To add FluentLenium to your project, just add the following dependency to your `
 </dependency>
 ```
 
-By default, FluentLenium provides a jUnit adapter.
+By default, FluentLenium provides a JUnit adapter.
 
 If you need the assertj dependency to improve the legibility of your test code:
 
@@ -752,6 +752,22 @@ If you want to test concurrency or if you need for any reason to not use the mec
     $("input").first().isEnabled();
 ```
 
+
+## Configure FluentLenium
+
+FluentLenium can be configured in many ways : JavaBean Accessors, Java Annotations, JVM System properties, 
+Environment variables, Configuration file. 
+
+All these ways can be used together as needed, and all configures the same set of properties.
+
+  - webDriver
+
+    The WebDriver type to use.
+
+    Can be ```firefox```, ```htmlunit``` or any other driver factory registered in 
+    `org.fluentlenium.configuration.WebDrivers` registry. 
+    
+    You can also give the fully qualified class Name of a `org.fluentlenium.configuration.WebDriverFactory` implementation responsible for creating new WebDriver instance.
 
 
 ## Customize FluentLenium
